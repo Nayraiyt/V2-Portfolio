@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+
+:root {
+    --dark-blue: #273447;
+    --dark-mid-blue: #395580;
+    --mid-blue: #6d84a6;
+    --light-blue: #cbdbf1;
+    --white: #ffffff;
+    --yellow-light: #fffbbc;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body{
+    background-color: var(--dark-blue);
+}
+
+.nav-box{
+    background-color: var(--white);
+    
+}
+
+/* --------- Hero -------- */
+.hero-box{
+    background-color: var(--dark-blue);
+    display: grid;
+    place-items: center;
+}
+
+.hero-title{
+    color: var(--yellow-light);
+    position: absolute;
+    font-family: "Caveat Brush", cursive;
+    font-weight: 400;
+    font-size: 100px;
+    font-style: normal;
+    top: 5%;
+    z-index: 3;
+}
+.hero-image{
+    top: 25%;
+    position: absolute;
+    max-width:30%;
+    max-height:auto;
+    z-index: 3;
+}
+
+/*clouds*/
+.hero-cloud-img{
+    position: absolute;
+    width: auto;
+    z-index: 2;
+}
+
+.cat-cloud-1{
+    top: 0%;
+    left: 60%;
+    height: 35%;
+    opacity: 80%;
+}
+.cat-cloud-2{
+    top: 5%;
+    left: 30%;
+    height: 25%;
+    opacity: 70%;
+}
+.cat-cloud-3{
+    top: -10%;
+    left: 80%;
+    height: 30%;
+    opacity: 80%;
+}
+.cat-cloud-4{
+    top: 30%;
+    left: 90%;
+    height: 40%;
+    opacity: 70%;
+}
+.gen-cloud-1{
+    top: 15%;
+    left: 50%;
+    height: 30%;
+    opacity: 40%;
+}
+.gen-cloud-2{
+    top: -5%;
+    left: 10%;
+    height: 30%;
+    opacity: 60%;
+}
+.gen-cloud-3{
+    top: 40%;
+    left: 45%;
+    height: 40%;
+    opacity: 90%;
+}
+.gen-cloud-4{
+    top: 35%;
+    left: -5%;
+    height: 35%;
+    opacity: 75%;
+}
+
+.hero-cloud-shape{
+    position: absolute;
+    z-index: 1;
+    border-radius: 50%;
+    background-color: var(--white);
+}
+.cloud-1{
+    opacity: 40%;
+}
+
+.cloud-1-1{
+    top: -5%;
+    left:-25%;
+    width: 65%;
+    height: 10%;
+    opacity: 100%;
+}
+.cloud-1-2{
+    top: 0%;
+    left:-15%;
+    width: 35%;
+    height: 10%;
+    opacity: 100%;
+}
+
+.cloud-1-3{
+    top: 7%;
+    left: 5%;
+    width: 30%;
+    height: 7%;
+    opacity: 100%;
+}
+
+.cloud-2{
+    top: 15%;
+    left: 75%;
+    width: 45%;
+    height: 7%;
+    opacity: 40%;
+}
+
+.cloud-3{
+    top: 30%;
+    left: 50%;
+    width: 35%;
+    height: 5%;
+    opacity: 40%;
+}
+
+.cloud-4{
+    top: 50%;
+    left: -30%;
+    width: 75%;
+    height: 15%;
+    opacity: 20%;
+}
+
+.hero-hill-shape{
+    z-index: 0;
+    position: absolute;
+}
+
+.hill-1{
+    top: 75%;
+    left: -25%;
+    height: 60%;
+    width: 100%;
+    background-color: var(--light-blue);
+    border-radius: 50%;
+}
+
+.hill-2{
+    top: 85%;
+    left: 40%;
+    height: 60%;
+    width: 100%;
+    background-color: var(--mid-blue);
+    border-radius: 50%;
+}
+
+.hill-3{
+    top: 95%;
+    left: -50%;
+    height: 50%;
+    width: 160%;
+    background-color: var(--dark-mid-blue);
+    border-radius: 50%;
+}
+
+/* ----------- ABOUT ME ------------*/
+.about-me-box{
+    position: absolute;
+    background-color: var(--dark-mid-blue);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 115%;
+}
