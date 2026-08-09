@@ -191,7 +191,7 @@ body {
     transform: translate3d(0, 0, 0) rotate(-1deg);
   }
   50% {
-    transform: translate3d(50vw, -1vh, 0) rotate(1deg);
+    transform: translate3d(25vw, -1vh, 0) rotate(1deg);
   }
   100% {
     transform: translate3d(0, 1vh, 0) rotate(-1deg);
@@ -203,7 +203,7 @@ body {
     transform: translate3d(0, 0, 0) rotate(1deg);
   }
   50% {
-    transform: translate3d(-50vw, -1vh, 0) rotate(-1deg);
+    transform: translate3d(-25vw, -1vh, 0) rotate(-1deg);
   }
   100% {
     transform: translate3d(0, 0, 0) rotate(1deg);
@@ -215,7 +215,7 @@ body {
     transform: translate3d(0, 0, 0) rotate(-1deg);
   }
   50% {
-    transform: translate3d(50vw, 1vh, 0) rotate(1deg);
+    transform: translate3d(25vw, 1vh, 0) rotate(1deg);
   }
   100% {
     transform: translate3d(0vw, -1vh, 0) rotate(-1deg);
@@ -552,4 +552,77 @@ body {
   left: 0;
   top: 115%;
   z-index: 5;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 5%;
+}
+
+.about-profile{
+  display: grid;
+  place-items: center;
+  padding: 5%;
+}
+
+.about-profile-intro{
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+
+.about-title-text{
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+}
+
+.about-profile-pfp{
+  display: grid;
+  place-items: center;
+}
+.about-profile-epiphet{
+  color: var(--white);
+}
+
+.about-profile-bio{
+  background-color: var(--white);
+  padding: 3%;
+  border-radius: 20px;
+}
+.about-bio-water{
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+}
+.about-water-image{
+  width: 70%;
+  height: auto; 
+}
+
+.about-profile-image{
+  width: 40%;
+  height:auto;
+  justify-self: center;
+}
+
+.about-hobbies{
+  display: grid;
+  grid-template-rows: 5fr 5fr 1fr;
+  padding: 5%;
+}
+
+.about-hobbies-music{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about-music-image{
+  width: 80%;
+  height: auto;
+}
+
+.about-hobbies-volley{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about-volley-image{
+  width: 80%;
+  height: auto;
 }
