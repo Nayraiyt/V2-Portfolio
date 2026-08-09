@@ -1,4 +1,10 @@
-@import url("https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+
+.pangolin-regular {
+  font-family: "Pangolin", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
 
 :root {
   --dark-blue: #273447;
@@ -10,10 +16,16 @@
   --light-light-yellow: #fffef2;
 }
 
+p{
+  font-size: 1.33rem;
+}
+
 html,
 body {
   max-width: 100%;
   overflow-x: hidden;
+  display: grid;
+  place-items: center;
 }
 
 body {
@@ -543,6 +555,16 @@ body {
   }
 }
 
+/* ---------- NAV BAR --------*/
+.nav-box {
+  width: 100%;
+  height: 15%;
+  background-color: var(--light-blue);
+  position: absolute;
+  top: 100%;
+  z-index: 8;
+}
+
 /* ----------- ABOUT ME ------------*/
 .about-me-box {
   position: absolute;
@@ -558,19 +580,31 @@ body {
 }
 
 .about-profile{
+  position: absolute;
+  background-color: var(--dark-mid-blue);
+  width: 100%;
+  height: 75%;
+  top: 115%;
+  z-index: 5;
   display: grid;
-  place-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 5%;
   padding: 5%;
+  justify-self: center;
 }
 
 .about-profile-intro{
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 4fr;
+  padding: 5%;
 }
 
 .about-title-text{
   writing-mode: vertical-lr;
   transform: rotate(180deg);
+  font-size: 50px;
+  color: var(--white);
+  justify-self: center;
 }
 
 .about-profile-pfp{
@@ -579,26 +613,40 @@ body {
 }
 .about-profile-epiphet{
   color: var(--white);
+  position: absolute;
+  bottom: 10%;
 }
 
 .about-profile-bio{
+  height: auto;
+  width: 65%;
   background-color: var(--white);
-  padding: 3%;
+  padding: 5%;
   border-radius: 20px;
+  justify-self: center;
+  box-shadow: 4px 4px 4px rgba(0,0,0,.5);
 }
 .about-bio-water{
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 .about-water-image{
-  width: 70%;
+  position: absolute;
+  transform: rotate(20deg);
+  top: 40%;
+  left: 70%;
+  width: 26%;
   height: auto; 
+  filter: drop-shadow(4px 4px 4px rgba(0,0,0,.5));
 }
 
 .about-profile-image{
-  width: 40%;
+  position: absolute;
+  top: 5%;
+  width: 30%;
   height:auto;
   justify-self: center;
+  filter: drop-shadow(4px 4px 4px rgba(0,0,0,.5));
 }
 
 .about-hobbies{
@@ -625,4 +673,35 @@ body {
 .about-volley-image{
   width: 80%;
   height: auto;
+}
+
+/* Work Experience*/
+.work-experience-box{
+  position: absolute;
+  top: 230%;
+  height: 140%;
+  width: 80%;
+  gap: 10px;
+  padding: 4%;
+  background-color: var(--white);
+  border-radius: 30px;
+  border: 2px solid var(--dark-blue);
+  box-shadow: inset 2px 2px 5px rgba(24, 24, 25, 0.7), inset -2px -2px 5px rgba(24, 24, 25, 0.7);
+  display: grid;
+  place-items: center;
+}
+
+.work-box{
+  background-color: var(--white);
+  border-radius: 20px;
+  padding: 3%;
+  box-shadow: 2px 2px 1px rgba(33, 33, 36, 0.7), -2px 0 1px rgba(105, 105, 114, 0.7);
+}
+.work-desc{
+  list-style-type: "#";
+  font-size: 1.2rem;
+}
+
+.work-experience-title{
+  font-size: 2.33rem;
 }
