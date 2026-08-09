@@ -602,19 +602,25 @@ body {
 .about-title-text{
   writing-mode: vertical-lr;
   transform: rotate(180deg);
-  font-size: 50px;
+  font-size: 75px;
   color: var(--white);
   justify-self: center;
 }
 
-.about-profile-pfp{
-  display: grid;
-  place-items: center;
+.about-profile-pfp {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: auto;
 }
-.about-profile-epiphet{
+
+.about-profile-epiphet {
   color: var(--white);
-  position: absolute;
-  bottom: 10%;
+  margin: 0;
+  padding: 5%;
+  text-align: center;
 }
 
 .about-profile-bio{
@@ -642,9 +648,8 @@ body {
 
 .about-profile-image{
   position: absolute;
-  top: 5%;
-  width: 30%;
-  height:auto;
+  top: -20%;
+  height: 100%;
   justify-self: center;
   filter: drop-shadow(4px 4px 4px rgba(0,0,0,.5));
 }
@@ -704,4 +709,367 @@ body {
 
 .work-experience-title{
   font-size: 2.33rem;
+}
+
+@media (max-width: 768px) {
+
+  html,
+  body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    display: block;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  /* HERO */
+
+  .hero-box {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 650px;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .hero-image {
+    top: 25%;
+    width: 60%;
+    max-width: 60%;
+    height: auto;
+  }
+
+  .hero-cloud-img {
+    max-width: none;
+  }
+
+  .cat-cloud-1 {
+    top: 25%;
+    left: -45%;
+    height: 35%;
+  }
+
+  .cat-cloud-2 {
+    top: 25%;
+    left: 65%;
+    height: 30%;
+  }
+
+  .cat-cloud-3 {
+    top: 0;
+    left: -10%;
+    height: 30%;
+  }
+  .cloud-1-1 {
+    width: 90%;
+    height: 8%;
+    left: -35%;
+  }
+
+  .cloud-1-2 {
+    width: 55%;
+    height: 8%;
+    left: -20%;
+  }
+
+  .cloud-1-3 {
+    width: 45%;
+    height: 6%;
+    left: 0;
+  }
+
+  .cloud-2-1 {
+    width: 60%;
+    left: 70%;
+  }
+
+  .cloud-2-2 {
+    width: 55%;
+    left: 55%;
+  }
+
+  .cloud-3-1 {
+    width: 55%;
+    left: 45%;
+  }
+
+  .cloud-3-2 {
+    width: 20%;
+    left: 30%;
+  }
+
+  .cloud-3-3 {
+    width: 40%;
+    left: 55%;
+  }
+
+  .cloud-4 {
+    width: 100%;
+    left: -40%;
+  }
+
+  .hill-1 {
+    top: 70%;
+    left: -50%;
+    width: 150%;
+    height: 45%;
+  }
+
+  .hill-2 {
+    top: 78%;
+    left: 25%;
+    width: 150%;
+    height: 40%;
+  }
+
+  .hill-3 {
+    top: 88%;
+    left: -75%;
+    width: 250%;
+    height: 50%;
+  }
+
+  .star {
+    width: 2px;
+    height: 2px;
+  }
+
+  .star-6,
+  .star-12,
+  .star-18,
+  .star-24,
+  .star-30 {
+    width: 3px;
+    height: 3px;
+  }
+
+  /* NAV */
+
+  .nav-box {
+    position: absolute;
+    top: 100vh;
+    width: 100%;
+    height: 70px;
+  }
+
+
+  /* About Me */
+
+  .about-profile {
+    position: absolute;
+
+    top: calc(100vh + 70px);
+
+    width: 100%;
+    height: auto;
+    min-height: 1100px;
+
+    left: 0;
+
+    padding: 10% 6%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    box-sizing: border-box;
+  }
+
+  .about-profile-intro {
+    width: 100%;
+    padding: 0;
+
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+
+    gap: 15px;
+  }
+
+  .about-profile-title {
+    display: grid;
+    place-items: center;
+    align-self: center;
+  }
+
+  .about-title-text {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+
+    font-size: 42px;
+
+    margin: 0;
+    white-space: nowrap;
+  }
+
+
+  .about-profile-pfp {
+    position: relative;
+
+    width: 100%;
+    min-height: 350px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    background-color: var(--white);
+    border-radius: 20px;
+  }
+
+
+  .about-profile-image {
+    position: absolute;
+
+    top: -10%;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 75%;
+    height: auto;
+
+    filter: drop-shadow(
+      4px 4px 4px rgba(0, 0, 0, 0.5)
+    );
+  }
+
+
+  .about-profile-epiphet {
+    color: var(--dark-blue);
+
+    font-size: 0.9rem;
+
+    margin: 0;
+    padding: 8% 5% 5%;
+
+    text-align: center;
+
+    z-index: 2;
+  }
+
+  .about-profile-bio {
+    width: 100%;
+    height: auto;
+
+    box-sizing: border-box;
+
+    padding: 8%;
+
+    border-radius: 20px;
+
+    justify-self: auto;
+
+    box-shadow:
+      4px 4px 4px rgba(0, 0, 0, 0.5);
+  }
+
+
+  .about-profile-bio p {
+    font-size: 1rem;
+  }
+
+  .about-bio-water {
+    display: block;
+    position: relative;
+  }
+
+  .about-water-image {
+    position: relative;
+
+    display: block;
+
+    width: 45%;
+
+    top: auto;
+    left: auto;
+
+    margin: 10px auto 0;
+
+    transform: rotate(15deg);
+  }
+
+
+  /* Work */
+
+  .work-experience-box {
+    position: absolute;
+
+    top: calc(100vh + 1170px);
+
+    width: 90%;
+    height: auto;
+
+    min-height: 900px;
+
+    padding: 8% 5%;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 25px;
+
+    border-radius: 25px;
+  }
+
+
+  .work-experience-title {
+    font-size: 2rem;
+
+    text-align: center;
+
+    margin: 0 0 10px;
+  }
+
+
+  .work-box {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 7%;
+
+    border-radius: 18px;
+  }
+
+
+  .work-title {
+    font-size: 1.35rem;
+    line-height: 1.25;
+
+    margin-top: 0;
+  }
+
+
+  .work-epiphet {
+    font-size: 0.9rem;
+  }
+
+
+  .work-desc {
+    font-size: 0.95rem;
+
+    padding-left: 1.2rem;
+
+    line-height: 1.5;
+  }
 }
