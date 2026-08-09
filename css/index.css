@@ -562,10 +562,52 @@ body {
 .nav-box {
   width: 100%;
   height: 15%;
-  background-color: var(--light-blue);
   position: absolute;
-  top: 100%;
+  background-color: var(--dark-mid-blue);
+  top: 90%;
   z-index: 8;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.nav-button{
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  display: inline-grid;
+  place-items: center;
+  height: 100%;
+  width: 75%;
+}
+
+.cloud-shape{
+  fill: white;
+  width: 100%;
+  height: 100%;
+}
+
+.cloud-shape, .button-text {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.home{
+  animation: sway-2 4s ease-in-out infinite;
+}
+.about{
+  animation: sway-3 4s ease-in-out infinite;
+}
+.work{
+  animation: sway-2 4s ease-in-out infinite;
+}
+.art{
+  animation: sway-3 4s ease-in-out infinite;
+}
+.tech{
+  animation: sway-2 4s ease-in-out infinite;
 }
 
 /* ----------- ABOUT ME ------------*/
