@@ -11,7 +11,7 @@
   --dark-mid-blue: #395580;
   --mid-blue: #6d84a6;
   --light-blue: #cbdbf1;
-  --white: #ffffff;
+  --white: #ffffe9ee;
   --light-yellow: #fffbbc;
   --light-light-yellow: #fffef2;
 }
@@ -581,18 +581,35 @@ body {
   place-items: center;
   height: 100%;
   width: 75%;
+  filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
+  transition: 0.3s ease;
 }
 
-.cloud-shape{
-  fill: white;
-  width: 100%;
-  height: 100%;
+.nav-button:hover{
+  filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
 }
 
 .cloud-shape, .button-text {
   grid-column: 1;
   grid-row: 1;
 }
+
+.cloud-shape{
+  fill: var(--white);
+  width: 100%;
+  height: 100%;
+  transition: 0.3s ease;
+}
+.cloud-shape:hover{
+  fill: var(--light-blue);
+}
+
+.button-text{
+  color: var(--dark-blue);
+}
+
+
+
 
 .home{
   animation: sway-2 4s ease-in-out infinite;
@@ -609,6 +626,32 @@ body {
 .tech{
   animation: sway-2 4s ease-in-out infinite;
 }
+
+@keyframes sway-2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes sway-3 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
 
 /* ----------- ABOUT ME ------------*/
 .about-me-box {
@@ -629,12 +672,13 @@ body {
   background-color: var(--dark-mid-blue);
   width: 100%;
   height: 75%;
-  top: 115%;
+  top: 105%;
   z-index: 5;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5%;
   padding: 5%;
+  padding-top: 15%;
   justify-self: center;
 }
 
@@ -659,6 +703,11 @@ body {
   justify-content: flex-end;
   align-items: center;
   height: auto;
+  transition: ease 0.5s;
+}
+
+.about-profile-pfp:hover{
+  transform: translateY(-5px) scale(1.05);
 }
 
 .about-profile-epiphet {
@@ -684,11 +733,16 @@ body {
 .about-water-image{
   position: absolute;
   transform: rotate(20deg);
-  top: 40%;
+  top: 55%;
   left: 70%;
   width: 26%;
   height: auto; 
   filter: drop-shadow(4px 4px 4px rgba(0,0,0,.5));
+  transition:  ease 0.5s;
+}
+
+.about-water-image:hover{
+  transform: rotate(-10deg) scale(1.2);
 }
 
 .about-profile-image{
@@ -742,10 +796,16 @@ body {
 }
 
 .work-box{
-  background-color: var(--white);
+  background-color: rgb(255, 255, 251);
   border-radius: 20px;
   padding: 3%;
   box-shadow: 5px 5px 5px rgba(33, 33, 36, 0.7), -5px 0 5px rgba(105, 105, 114, 0.7);
+  transition: ease 0.5s;
+}
+
+.work-box:hover{
+  transform: scale(1.05) translateY(5px);
+  box-shadow: 10px 10px 10px rgba(33, 33, 36, 0.7), -10px 0 10px rgba(105, 105, 114, 0.7);
 }
 .work-desc{
   list-style-type: "✧";
@@ -782,46 +842,56 @@ body {
 .path-artist, .path-developer{
   display: grid;
   place-items: center;
+
 }
 
-.card{
+.card {
+  width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 1;
+}
+
+.holo-foil {
   width: 70%;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 10px 10px 2px rgba(0,0,0,0.5);
-  transform: translate(0, 10%,0);
+  border-radius: 15px;
+  box-shadow: 10px 10px 2px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease;
 }
 
-.path-artist-image{
-  animation: sway-2 4s ease-in-out infinite;
-}
-.path-developer-image{
-  animation: sway-3 4s ease-in-out infinite;
-}
-@keyframes sway-2 {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+.holo-foil::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    0deg,
+    transparent,
+    rgba(255, 255, 255, 0.8)
+  );
+
+  transform: rotate(45deg) translateY(100%);
+  transition: all 0.5s ease;
+  z-index: 2;
+  pointer-events: none;
 }
 
-@keyframes sway-3 {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+.holo-foil:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
+.holo-foil:hover::before {
+  transform: rotate(45deg);
+}
 
 @media (max-width: 768px) {
 
@@ -863,6 +933,11 @@ body {
     width: 60%;
     max-width: 60%;
     height: auto;
+    transition: 0.5 ease;
+  }
+
+  .hero-image:hover{
+    transform: translateY(1.2) rotate(10deg);
   }
 
   .hero-cloud-img {
@@ -983,8 +1058,7 @@ body {
 
   .about-profile {
     position: absolute;
-
-    top: calc(100vh + 70px);
+    top: 110%;
 
     width: 100%;
     height: auto;
