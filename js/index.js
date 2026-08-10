@@ -12,6 +12,28 @@ const smoother = ScrollSmoother.create({
   effects: true
 });
 
+gsap.from(".nav-wrapper", {
+  scrollTrigger: {
+    trigger: ".nav-wrapper",
+    start: "top 80%",
+    toggleActions: "play reverse play reverse" 
+  },
+  x: 800,
+  duration: 1
+});
+
+gsap.from(".work-experience-box", {
+  scrollTrigger: {
+    trigger: ".work-experience-box",
+    start: "-40%",
+
+    toggleActions: "play reverse play reverse" 
+  },
+  opacity: 0,
+  y: 50,
+  duration: 2
+});
+
 function scrollToAbout() {
   smoother.scrollTo("#about", true, "top top");
 }

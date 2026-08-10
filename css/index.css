@@ -584,6 +584,9 @@ body {
   position: relative;
   background-color: var(--dark-mid-blue);
   z-index: 8;
+}
+
+.nav-wrapper{
   display: grid;
   place-items: center;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -684,14 +687,13 @@ body {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 4fr;
-  align-items: end;
+  grid-template-rows: 1fr;
 }
 
 .about-title-text {
   position: absolute;
   left: 0;
   top: 20%;
-  justify-self: center;
   writing-mode: vertical-lr;
   transform: rotate(180deg);
   margin: 0;
