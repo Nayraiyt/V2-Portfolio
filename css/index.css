@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pangolin&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
 
 .pangolin-regular {
   font-family: "Pangolin", cursive;
@@ -16,12 +16,12 @@
   --light-light-yellow: #fffef2;
 }
 
-p{
+p {
   font-size: 1.33rem;
 }
 
-html{
-scroll-behavior: smooth;
+html {
+  scroll-behavior: smooth;
 }
 
 html,
@@ -32,12 +32,12 @@ body {
   padding: 0;
 }
 
-
 body {
   background-color: var(--dark-blue);
 }
 
-.wrapper, .content{
+.wrapper,
+.content {
   display: grid;
   place-items: center;
   max-width: 100%;
@@ -59,7 +59,7 @@ body {
   top: 0%;
   height: 100%;
   width: 100%;
-  background-position: center; 
+  background-position: center;
   background-size: cover;
   background-image: url("../images/hero-bg.png");
 }
@@ -287,7 +287,7 @@ body {
   }
 }
 
-.hero-background-box{
+.hero-background-box {
   position: absolute;
   top: 70%;
   height: 30%;
@@ -580,7 +580,7 @@ body {
 /* ---------- NAV BAR --------*/
 .nav-box {
   width: 100vw;
-  height: 30vh;
+  padding: 5%;
   position: relative;
   background-color: var(--dark-mid-blue);
   z-index: 8;
@@ -589,7 +589,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
-.nav-button{
+.nav-button {
   background: transparent;
   border: none;
   padding: 0;
@@ -599,46 +599,47 @@ body {
   place-items: center;
   height: 100%;
   width: 75%;
-  filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.5));
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.5));
   transition: 0.3s ease;
 }
 
-.nav-button:hover{
-  filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.5));
+.nav-button:hover {
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.5));
 }
 
-.cloud-shape, .button-text {
+.cloud-shape,
+.button-text {
   grid-column: 1;
   grid-row: 1;
 }
 
-.cloud-shape{
+.cloud-shape {
   fill: var(--white);
   width: 100%;
   height: 100%;
   transition: 0.3s ease;
 }
-.cloud-shape:hover{
+.cloud-shape:hover {
   fill: var(--light-blue);
 }
 
-.button-text{
+.button-text {
   color: var(--dark-blue);
 }
 
-.home{
+.home {
   animation: sway-2 4s ease-in-out infinite;
 }
-.about{
+.about {
   animation: sway-3 4s ease-in-out infinite;
 }
-.work{
+.work {
   animation: sway-2 4s ease-in-out infinite;
 }
-.art{
+.art {
   animation: sway-3 4s ease-in-out infinite;
 }
-.tech{
+.tech {
   animation: sway-2 4s ease-in-out infinite;
 }
 
@@ -666,48 +667,61 @@ body {
   }
 }
 
-
-
 /* ----------- ABOUT ME ------------*/
-.about-me-box{
+
+.about-me-box {
   position: relative;
   background-color: var(--dark-mid-blue);
   width: 100vw;
-  height: 75vh;
-  z-index: 5;
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5%;
   padding: 5%;
-  padding-top: 15%;
-  justify-self: center;
+  z-index: 5;
 }
-
-.about-profile-intro{
+.about-profile-intro {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 4fr;
-  padding: 5%;
+  align-items: end;
 }
 
-.about-title-text{
+.about-title-text {
+  position: absolute;
+  left: 0;
+  top: 20%;
+  justify-self: center;
   writing-mode: vertical-lr;
   transform: rotate(180deg);
-  font-size: 75px;
+  margin: 0;
+  font-size: 4rem;
   color: var(--white);
-  justify-self: center;
 }
 
 .about-profile-pfp {
   position: relative;
+  height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
-  height: auto;
-  transition: ease 0.5s;
+
+  transition: transform 0.5s ease;
 }
 
-.about-profile-pfp:hover{
+.about-profile-image {
+  position: relative;
+  height: 85%;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
+  transition: transform 0.5s ease;
+}
+
+.about-profile-image:hover {
   transform: translateY(-5px) scale(1.05);
 }
 
@@ -718,139 +732,120 @@ body {
   text-align: center;
 }
 
-.about-profile-bio{
-  height: auto;
-  width: 65%;
+.about-profile-bio {
+  position: relative;
+  min-height: 65vh;
+  width: 100%;
+  box-sizing: border-box;
   background-color: var(--white);
-  padding: 5%;
+  padding: 10%;
   border-radius: 20px;
-  justify-self: center;
-  box-shadow: 4px 4px 4px rgba(0,0,0,.5);
-}
-.about-bio-water{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-.about-water-image{
-  position: absolute;
-  transform: rotate(20deg);
-  top: 55%;
-  left: 70%;
-  width: 26%;
-  height: auto; 
-  filter: drop-shadow(4px 4px 4px rgba(0,0,0,.5));
-  transition:  ease 0.5s;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
 }
 
-.about-water-image:hover{
+.about-bio-water {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  position: relative;
+}
+
+.about-water-image {
+  position: absolute;
+
+  top: -20%;
+  left: 35%;
+  width: 100%;
+  height: auto;
+
+  transform: rotate(20deg);
+
+  filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
+
+  transition: transform 0.5s ease;
+}
+
+.about-water-image:hover {
   transform: rotate(-10deg) scale(1.2);
 }
 
-.about-profile-image{
-  position: absolute;
-  top: -20%;
-  height: 100%;
-  justify-self: center;
-  filter: drop-shadow(4px 4px 4px rgba(0,0,0,.5));
-}
-
-.about-hobbies{
-  display: grid;
-  grid-template-rows: 5fr 5fr 1fr;
-  padding: 5%;
-}
-
-.about-hobbies-music{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.about-music-image{
-  width: 80%;
-  height: auto;
-}
-
-.about-hobbies-volley{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.about-volley-image{
-  width: 80%;
-  height: auto;
+.bio-text{
+  font-size: 1.5rem;
 }
 
 /* Work Experience*/
-.work-experience-box{
+.work-experience-box {
   position: relative;
   display: grid;
   place-items: center;
   padding: 10%;
-  height: 140vh;
-  width: 80vw;
 }
 
-.work-experience{
+.work-experience {
   height: 100%;
   width: 100%;
   gap: 10px;
-  padding: 4%;
+  padding: 4% 7% 7% 7%;
   background-color: var(--white);
   border-radius: 30px;
   border: 2px solid var(--dark-blue);
-  box-shadow: inset 5px 5px 5px rgba(24, 24, 25, 0.7), inset -5px -5px 5px rgba(24, 24, 25, 0.7);
+  box-shadow:
+    inset 5px 5px 5px rgba(24, 24, 25, 0.7),
+    inset -5px -5px 5px rgba(24, 24, 25, 0.7);
   display: grid;
   place-items: center;
 }
 
-.work-box{
+.work-box {
   background-color: rgb(255, 255, 251);
   border-radius: 20px;
   padding: 3%;
-  box-shadow: 5px 5px 5px rgba(33, 33, 36, 0.7), -5px 0 5px rgba(105, 105, 114, 0.7);
+  box-shadow:
+    5px 5px 5px rgba(33, 33, 36, 0.7),
+    -5px 0 5px rgba(105, 105, 114, 0.7);
   transition: ease 0.5s;
 }
 
-.work-box:hover{
+.work-box:hover {
   transform: scale(1.05) translateY(5px);
-  box-shadow: 10px 10px 10px rgba(33, 33, 36, 0.7), -10px 0 10px rgba(105, 105, 114, 0.7);
+  box-shadow:
+    10px 10px 10px rgba(33, 33, 36, 0.7),
+    -10px 0 10px rgba(105, 105, 114, 0.7);
 }
-.work-desc{
+.work-desc {
   list-style-type: "✧";
   font-size: 1.2rem;
 }
 
-.work-experience-title{
-  font-size: 2.33rem;
+.work-experience-title {
+  font-size: 2.5rem;
 }
 
 /* ----PATH ------*/
-.path-box{
+.path-box {
   position: relative;
-  height: 120vh;
-  width: 100vw;
+  padding: 10%;
   display: grid;
   place-items: center;
   background-image: url("../images/hero-bg.png");
 }
 
-.path-title{
+.path-title {
   color: var(--light-yellow);
   font-size: 4rem;
 }
 
-.path-options{
+.path-options {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 10%;
   padding-top: 0%;
   gap: 10%;
-
 }
-.path-artist, .path-developer{
+.path-artist,
+.path-developer {
   display: grid;
   place-items: center;
-
 }
 
 .card {
@@ -874,17 +869,13 @@ body {
 }
 
 .holo-foil::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -50%;
   left: -50%;
   width: 200%;
   height: 200%;
-  background: linear-gradient(
-    0deg,
-    transparent,
-    rgba(255, 255, 255, 0.8)
-  );
+  background: linear-gradient(0deg, transparent, rgba(255, 255, 255, 0.8));
 
   transform: rotate(45deg) translateY(100%);
   transition: all 0.5s ease;
@@ -901,11 +892,11 @@ body {
   transform: rotate(45deg);
 }
 
-.holo-foil:active{
+.holo-foil:active {
   transform: scale(1);
 }
 
-.gen-bg{
+.gen-bg {
   width: 100%;
   height: 100%;
   object-fit: cover;
