@@ -10,10 +10,9 @@ Features (present)
 - cool visuals
 - simple atmospheric css animations
 - Its a portfolio resume thing, so you know, general work experience, about me, ect
-- An unfinished nav bar
+- A Nav Bar
 
 Features (future)
-- A finished Nav Bar
 - Portfolio sections for both art and tech
 - more polish
 - GSAP animations for some scroll timeline magic
