@@ -12,14 +12,30 @@ const smoother = ScrollSmoother.create({
   effects: true
 });
 
-gsap.from(".nav-wrapper", {
-  scrollTrigger: {
-    trigger: ".nav-wrapper",
-    start: "top 80%",
-    toggleActions: "play reverse play reverse" 
-  },
-  x: 800,
-  duration: 1
+const mobile = gsap.matchMedia();
+
+mm.add("(min-width: 600px)", () => {
+  gsap.from(".nav-wrapper", {
+    scrollTrigger: {
+      trigger: ".nav-wrapper",
+      start: "top 80%",
+      toggleActions: "play reverse play reverse"
+    },
+    x: 800,
+    duration: 1
+  });
+});
+
+mm.add("(max-width: 600px)", () => {
+  gsap.from(".nav-wrapper", {
+    scrollTrigger: {
+      trigger: ".nav-wrapper",
+      start: "top",
+      toggleActions: "play reverse play reverse"
+    },
+    x: 800,
+    duration: 1
+  });
 });
 
 gsap.from(".work-experience-box", {

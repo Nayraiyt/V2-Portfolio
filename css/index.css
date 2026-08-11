@@ -67,8 +67,6 @@ body {
 .hero-image {
   top: 15%;
   position: absolute;
-  max-width: 30%;
-  max-height: auto;
   z-index: 6;
 
   animation: sway 4s ease-in-out infinite;
@@ -903,4 +901,109 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+@media (max-width: 600px){
+
+  /* ------ HERO ------*/
+  .hero-box{
+    height: 80vh;
+  }  
+  .hero-bg{
+    width: 400%;
+    height: 100%;
+  }
+  .hero-background-box{
+    top: 65%;
+    width: 400%;
+    height: 35%;
+    justify-self: center;
+  }
+
+  .cat-cloud-1{
+    top: 40%;
+    height: auto;
+    width: 70%;
+    left: -15%;
+
+    animation: cloud-drift-1 50s linear infinite alternate;
+  }
+
+  .cat-cloud-2{
+    top: 20%;;
+    height: auto;
+    width: 70%;
+    right: -10%;
+
+    animation: cloud-drift-2 80s linear infinite alternate;
+  }
+
+  .cat-cloud-3{
+    top: 0;
+    width: 80%;
+    height: auto;
+    left: 0%;
+
+    animation: cloud-drift-3 70s linear infinite alternate;
+  }
+
+  .cloud-1-1, .cloud-2-1, .cloud-3-1{
+    width: 400vw;
+  }
+
+  .cloud-1-2, .cloud-4{
+    width: 500vw;
+  }
+
+  .cloud-1-3, .cloud-3-2{
+    width: 300vw;
+  }
+
+  .hero-image{
+    top: 20%;
+    height: 35vh;
+    width: auto;
+  }
+
+  /* NAV */
+  .nav-box {
+    height: 20vh;
+    display: none !important;
+  }
+  .nav-wrapper{
+    grid-template-columns: 1fr 1fr 1fr; 
+  }
+
+  .about, .work{
+    display: none !important;
+  }
+
+  /* About me */
+  .about-me-box{
+    grid-template-columns: 1fr;
+    height: 145vh;
+  }
+
+  .about-water-image{
+    top: 10%;
+    left: 35%;
+    width: 90%;
+    height: auto;
+  }
+
+  .about-profile-bio{
+    padding: 5%;
+  }
+
+  .work-box{
+    padding:6%;
+  }
+
+  .path-title{
+    font-size: 2.2rem;
+  }
+
+  .path-options{
+    grid-template-columns: 1fr;
+  }
 }
