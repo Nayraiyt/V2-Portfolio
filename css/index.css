@@ -65,10 +65,11 @@ body {
 }
 
 .hero-image {
-  top: 15%;
+  top: 0%;
+  left: 50%;
   position: absolute;
-  z-index: 6;
-  width: 30%;
+  z-index: 10;
+  width: 38%;
   height: auto;
 
   animation: sway 4s ease-in-out infinite;
@@ -95,25 +96,25 @@ body {
   mix-blend-mode: lighten;
 }
 
-.cat-cloud-1 {
-  top: 25%;
-  left: -15%;
-  height: 55%;
+.cat-cloud-3 {
+  top: 23%;
+  left: 0%;
+  height: 50%;
   opacity: 80%;
 
   animation: cloud-drift-1 200s linear infinite alternate;
 }
 .cat-cloud-2 {
-  top: 20%;
+  top: 0%;
   left: 80%;
   height: 40%;
   opacity: 80%;
 
   animation: cloud-drift-2 220s linear infinite alternate;
 }
-.cat-cloud-3 {
+.cat-cloud-1 {
   top: -5%;
-  left: 0%;
+  left: -15%;
   height: 40%;
   opacity: 100%;
   mix-blend-mode: none;
@@ -293,6 +294,7 @@ body {
   height: 30%;
   width: 100%;
   overflow: hidden;
+  opacity: 100%;
 }
 
 .hero-hill-shape {
@@ -905,7 +907,73 @@ body {
   object-position: center;
 }
 
-@media (max-width: 600px){
+/* fancy paper */
+
+.fancypaper-box{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color:  var(--light-blue);
+  padding: 10%;
+  overflow-x: hidden;
+  align-items: center;
+}
+
+.certification-box{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  padding-right: 5%;
+}
+
+.fancypaper-track{
+  display: flex;
+  width: max-content;
+  animation: loop 10s infinite linear;
+}
+
+.certification{
+  padding: 15%;
+  background-color: var( --light-light-yellow);
+  color: var(--dark-mid-blue);
+  text-align: center;
+  align-content: center;
+  flex-shrink: 0;
+  flex-basis:10%;
+  border-radius: 2px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease;
+}
+
+.c-image{
+  height: 100%;
+  width: auto;
+}
+
+.c1{
+  transform: rotate(-2deg);
+}
+
+.c2{
+  transform: rotate(2deg);
+}
+
+.certification:hover{
+  transform: scale(1.05);
+}
+
+@keyframes loop{
+  from{
+    translate: 0;
+  }
+  to{
+    translate: -100%;
+  }
+}
+
+@media (max-width: 500px){
 
   /* ------ HERO ------*/
   .hero-box{
@@ -1008,4 +1076,21 @@ body {
   .path-options{
     grid-template-columns: 1fr;
   }
+}
+
+@media (max-width: 400px){
+  .about-me-box{
+    grid-template-columns: 1fr;
+    height: 165vh;
+  }
+  .about-profile-intro{
+    grid-template-columns: 1fr;
+  }
+  .about-title-text{
+    transform: rotate(1deg);
+    writing-mode: default;
+    top: 0%;
+    font-size: 2rem;
+  }
+
 }
