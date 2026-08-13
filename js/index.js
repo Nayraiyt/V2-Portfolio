@@ -13,11 +13,11 @@ mm.add("(min-width: 600px)", () => {
   gsap.from(".nav-wrapper", {
     scrollTrigger: {
       trigger: ".nav-wrapper",
-      start: "top 80%",
+      start: "top 90%",
       toggleActions: "play reverse play reverse",
     },
-    x: -1600,
-    duration: 1,
+    x: -700,
+    duration: 3,
   });
 });
 

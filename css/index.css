@@ -1,11 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
 
-.pangolin-regular {
-  font-family: "Pangolin", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
 :root {
   --dark-blue: #273447;
   --dark-mid-blue: #395580;
@@ -22,6 +16,14 @@ p {
 
 html {
   scroll-behavior: smooth;
+  font-family: "Pangolin", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--dark-mid-blue);
+}
+
+.sub-text{
+  font-size: 0.85em;
 }
 
 html,
@@ -915,8 +917,8 @@ body {
   flex-direction: column;
   width: 100%;
   background-color:  var(--light-blue);
-  padding: 10%;
-  overflow-x: hidden;
+  padding: 5%;
+  overflow: hidden;
   align-items: center;
 }
 
@@ -925,22 +927,22 @@ body {
   align-items: center;
   justify-content: center;
   gap: 5%;
+  width: max-content;
   padding-right: 5%;
 }
 
 .fancypaper-track{
   display: flex;
   width: max-content;
-  animation: loop 10s infinite linear;
+  animation: loop 30s infinite linear;
 }
 
 .certification{
-  padding: 15%;
+  padding: 2%;
   background-color: var( --light-light-yellow);
   color: var(--dark-mid-blue);
   text-align: center;
   align-content: center;
-  flex-shrink: 0;
   flex-basis:10%;
   border-radius: 2px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
@@ -948,8 +950,9 @@ body {
 }
 
 .c-image{
-  height: 100%;
-  width: auto;
+  height: auto;
+  width: 100%;
+  z-index: 11;
 }
 
 .c1{
@@ -966,12 +969,13 @@ body {
 
 @keyframes loop{
   from{
-    translate: 0;
+    translate: 100%;
   }
   to{
     translate: -100%;
   }
 }
+
 
 @media (max-width: 500px){
 
