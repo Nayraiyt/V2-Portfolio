@@ -65,6 +65,17 @@ gsap.from(".path-title", {
   duration: 1,
 });
 
+gsap.from(".fancypaper-title", {
+  scrollTrigger: {
+    trigger: ".fancypaper-title",
+    start: "top 80%",
+    toggleActions: "play reverse play reverse",
+  },
+  x: -300,
+  duration: 2
+});
+
+
 
 function scrollToAbout() {
   smoother.scrollTo("#about", true, "top top");
