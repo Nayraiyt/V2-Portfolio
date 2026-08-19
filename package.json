@@ -1,0 +1,21 @@
+{
+  "name": "v2-portfolio",
+  "version": "1.0.0",
+  "description": "This is my really very cool personal portfolio!!! In the future, im hopping to add in the art and technology sections, but for now, its a pretty clean single pager. (though right now, its pretty mobile unfriendly... sorry about that ;-;)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nayraiyt/V2-Portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Nayraiyt/V2-Portfolio/issues"
+  },
+  "homepage": "https://github.com/Nayraiyt/V2-Portfolio#readme"
+}
