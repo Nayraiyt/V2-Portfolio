@@ -1,0 +1,162 @@
+.wrapper, .content{
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+     background-color: rgb(58, 58, 58);
+}
+
+
+
+/* ------PROJECTS---------- */
+
+.project-design-box{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 80%;
+    gap: 3%;
+    height: 140vh;
+    place-items: center;
+}
+.project-card{
+    background-color: transparent;
+    perspective: 1000px; 
+    width: 100%;
+    height: 100%;
+}
+
+.project-card-inner {
+  position: relative;
+  aspect-ratio: 7219 / 5035;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.project-card:hover .project-card-inner {
+  transform: rotateY(-180deg);
+}
+
+.project-card-front,
+.project-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    box-sizing: border-box;
+}
+
+.project-card-image{
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+.project-card-back {
+  color: white;
+  transform: rotateY(180deg);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 5%;
+  place-items: center;
+}
+
+/* .atlas-f{
+    background-color: lightblue;
+} */
+.atlas-b{
+    background-color: blue;
+}
+/* .mushroot-f{
+    background-color: lightgreen;
+} */
+.mushroot-b{
+    background-color: green;
+}
+/* .summit-f{
+    background-color: pink;
+} */
+.summit-b{
+    background-color: purple;
+}
+
+/* .dcad-f{
+    background-color: white;
+} */
+.dcad-b{
+    background-color: red;
+}
+
+.project-card-title{
+    margin: 0;
+}
+
+.project-card-logo{
+    height: auto;
+    width: 75%;
+}
+
+.project-card-links{
+    height: 100%;
+    width: 100%;
+    gap: 10%;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.link-box{
+    height: 100%;
+    width: 100%;
+    gap: 10%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    place-items: center;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.logo{
+    width: 80%;
+    height: auto;
+    justify-self: center;
+}
+
+.project-link-text{
+    color: black;
+}
+
+/* ------TOOLS---------- */
+
+.tool-box{
+    position: relative;
+    height: 30vh;
+    width: 80vw;
+    gap: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    overflow: hidden;
+    place-items: center center;
+    background-color: white;
+}
+
+.tool-card{
+    height: 60%;
+    width: 80%;
+    display: grid;
+    grid-template-rows: 4fr 1fr;
+    place-items: center;
+}
+
+.tool-card-image{
+    height: auto;
+    width: 75%;
+}
+
+.tool-text{
+    color: black;
+}
