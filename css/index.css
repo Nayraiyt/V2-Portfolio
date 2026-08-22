@@ -1162,7 +1162,8 @@ body {
   .about-me-box {
     grid-template-columns: 1fr;
     place-items: center;
-    height: 130vh;
+    height: auto;
+    padding-bottom: 20vh;
     min-height: 0;
   }
   .about-profile-intro {
