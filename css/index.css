@@ -1161,18 +1161,21 @@ body {
 @media (max-width: 400px) {
   .about-me-box {
     grid-template-columns: 1fr;
-    align-items: center;
+    place-items: center;
+    height: auto;
+    min-height: 0;
   }
   .about-profile-intro {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 4fr;
-    align-items: center;
+    grid-template-rows: auto auto;
+    place-items: center;
   }
   .about-profile-title {
     padding: 0;
     width: 100%;
     display: grid;
     place-items: center;
+    justify-items: center
   }
   .about-title-text {
     position: relative;
@@ -1188,9 +1191,10 @@ body {
     width: 100%;
     display: grid;
     align-items: center;
+    justify-items: center
   }
   .about-profile-image{
-    height: 80%;
-    width: auto;
+    height: auto;
+    width: 80vw;
   }
 }
