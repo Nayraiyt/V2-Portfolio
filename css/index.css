@@ -63,7 +63,7 @@ body {
   width: 100%;
   background-position: center;
   background-size: cover;
-  background-image: url("../images/hero-bg.png");
+  background-image: url("../images/hero-bg.webp");
 }
 
 .hero-image {
@@ -833,7 +833,7 @@ body {
   padding: 10%;
   display: grid;
   place-items: center;
-  background-image: url("../images/hero-bg.png");
+  background-image: url("../images/hero-bg.webp");
 }
 
 .path-title {
