@@ -1,0 +1,19 @@
+.construction{
+    height: 90vh;
+    width: auto;
+    max-width: 100vw;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+@media (max-width: 500px){
+    .construction{
+        height: auto;
+        width: 90vw;
+        max-height: 100vh;
+    }
+}
