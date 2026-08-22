@@ -839,6 +839,7 @@ body {
 .path-title {
   color: var(--light-yellow);
   font-size: 4rem;
+  text-align: center;
 }
 
 .path-options {
@@ -915,6 +916,7 @@ body {
   z-index: 15;
   color: var(--white);
   font-size: 3rem;
+  text-align: center;
 }
 
 .fancypaper-box {
@@ -1020,10 +1022,11 @@ body {
 }
 
 .contact-box{
-  padding: 5%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 5%;
+  width: 80vw;
+  place-items: center;
 }
 
 .buisness-text{
@@ -1031,14 +1034,14 @@ body {
 }
 
 .contact-buisness-box{
-  padding: 20%;
+  padding: 5%;
   display: grid;
   place-items: center;
   gap: 50%;
 }
 
 .contact-social-box{
-  padding: 20%;
+  padding: 5%;
   gap: 30%;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1154,21 +1157,41 @@ body {
   .path-options{
     grid-template-columns: 1fr;
   }
+  .hero-image{
+    left: 30%;
+    height: 60vh;
+    width: auto;
+  }
 }
 
 @media (max-width: 400px){
+
   .about-me-box{
     grid-template-columns: 1fr;
     height: 165vh;
+    align-items: center;
   }
   .about-profile-intro{
     grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr;
+    align-items: center;
+  }
+  .about-profile-title{
+    padding: 0;
+    width: 100%;
+    display: grid;
+    place-items: center;
   }
   .about-title-text{
-    transform: rotate(1deg);
-    writing-mode: default;
-    top: 0%;
-    font-size: 2rem;
+    position: relative;
+    writing-mode: horizontal-tb;
+    transform: rotate(0deg);
+    margin: 0;
+    font-size: 4rem;
+    color: var(--white);
   }
 
+  .about-me-box{
+    height: 175vh;
+  }
 }
