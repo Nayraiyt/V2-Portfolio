@@ -1,15 +1,15 @@
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
-const smoother = ScrollSmoother.create({
-  wrapper: "#wrapper",
-  content: "#content",
-  smooth: 1,
-  effects: true,
-});
 
 const mm = gsap.matchMedia();
 
 mm.add("(min-width: 600px)", () => {
+  const smoother = ScrollSmoother.create({
+    wrapper: "#wrapper",
+    content: "#content",
+    smooth: 1,
+    effects: true,
+  });
   gsap.from(".nav-wrapper", {
     scrollTrigger: {
       trigger: ".nav-wrapper",
@@ -60,6 +60,7 @@ mm.add("(min-width: 600px)", () => {
     x: -300,
     duration: 2,
   });
+
 });
 
 

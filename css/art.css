@@ -3,7 +3,6 @@
     place-items: center;
     width: 100vw;
     height: auto;
-    overflow: hidden;
     background-color: rgb(58, 58, 58);
 }
 
@@ -29,7 +28,28 @@
         max-height: 100vh;
     }
 }
+/* Youtube */
 
+.youtube-box{
+    width: 80%;
+    height: auto;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.youtube-intro-box{
+    position: relative;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.youtube-stats-box{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    
+}
 
 /* ------PROJECTS---------- */
 
