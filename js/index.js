@@ -1,6 +1,5 @@
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
-
 const mm = gsap.matchMedia();
 
 mm.add("(min-width: 600px)", () => {
@@ -60,19 +59,4 @@ mm.add("(min-width: 600px)", () => {
     x: -300,
     duration: 2,
   });
-
 });
-
-
-
-function scrollToAbout() {
-  smoother.scrollTo("#about", true, "top top");
-}
-
-function scrollToWork() {
-  smoother.scrollTo("#work", true, "top top");
-}
-
-function scrollToHome() {
-  smoother.scrollTo(0, true);
-}

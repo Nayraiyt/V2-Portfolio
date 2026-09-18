@@ -1044,6 +1044,27 @@ body {
   color: var(--white);
 }
 
+.hobbies-box{
+  display: grid;
+  place-items: center;
+  position: relative
+}
+
+.hobbies{
+  display: grid;
+  place-items: center;
+  position: relative;
+  padding: 3%;
+}
+
+.hobbies-card{
+  padding: 5%;
+  width: 75%;
+  height:75%;
+  background-color: var(--white);
+  border-radius: 30px;
+}
+
 @media (max-width: 500px) {
   /* ------ HERO ------*/
   .hero-box {
