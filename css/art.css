@@ -29,7 +29,7 @@ img{
 @media (max-width: 500px){
     img{
         height: auto;
-        width: 8vw;
+        width: 80vw;
     }
     .construction{
         height: auto;

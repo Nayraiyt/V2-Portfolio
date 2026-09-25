@@ -10,10 +10,28 @@ body {
     display: grid;
     place-items: center;
 }
+
+.wrapper, .content{
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: auto;
+}
+
+img{
+    height: 50vh;
+    width: auto;
+    justify-self: center;
+}
+
 @media (max-width: 500px){
     .construction{
         height: auto;
         width: 90vw;
         max-height: 100vh;
+    }
+    img{
+        height: auto;
+        width: 80vw;
     }
 }
